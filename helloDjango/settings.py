@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '4^6dv0-kjb%j9v9dk_5#i@w=$nqg0c$9n+xv$5bok$fy@qo7_7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [*]
 
 
 # Application definition
@@ -110,6 +110,7 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
+USE_L10N = True
 
 USE_TZ = True
 
@@ -118,3 +119,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_STORAGE='whitenoise.django.GzipManifestStaticFilesStorage'
